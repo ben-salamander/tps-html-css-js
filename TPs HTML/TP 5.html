@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Formulaire d'inscription -->
+    <form name="ficheInscription" method="POST">
+      <!-- nom prénom  -->
+      <label for="nom">Nom : </label>
+      <input type="text" />
+      <label for="prenom">Prénom : </label>
+      <input type="text" />
+      <br />
+      <!-- date et lieu de naissance  -->
+      <label for="dateNaissance">Date de naissance : </label>
+      <input type="datetime" />
+      <label for="lieuNaissance">Ville de naissance : </label>
+      <input type="text" />
+      <br />
+      <!-- pays d'origine -->
+      <label for="paysOrigine">Pays d'origine : </label>
+      <input type="text" />
+      <br />
+      <!-- civilité -->
+      Civilité :
+      <label for="ciciliteM">M</label>
+      <input type="checkbox" />
+      <label for="ciciliteF">F</label>
+      <input type="checkbox" />
+      <br />
+      <!-- note au BAC -->
+      <label for="noteBac"
+        >Note obtenue au BAC (moyenne ou pourcentage) :
+      </label>
+      <input type="number" />
+      <br />
+      <!-- formation -->
+      <label for="formation">Formation : </label>
+      <input type="text" />
+      <br />
+      <!-- d'autres choix de formation possible -->
+      <label for="formationAutres">Autres formations : </label>
+      <select name="liste" id="formationAutres">
+        <option value="formationAutresChoix"></option>
+      </select>
+      <br />
+    </form>
+  </body>
+</html>
