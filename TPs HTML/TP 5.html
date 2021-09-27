@@ -41,10 +41,28 @@
       <input type="text" />
       <br />
       <!-- d'autres choix de formation possible -->
-      <label for="formationAutres">Autres formations : </label>
-      <select name="liste" id="formationAutres">
-        <option value="formationAutresChoix"></option>
+      <label for="formations">Autres formations : </label>
+      <select name="liste" id="formations">
+        <option value="options">-- Choisir --</option>
+        <option value="cap">CAP</option>
+        <option value="bts">BTS</option>
       </select>
+      <br />
+      <!-- mail et téléphone -->
+      <label for="email">Adresse email : </label>
+      <input type="text" />
+      <br />
+      <label for="numTelephone">Numéro de téléphone : </label>
+      <input type="text" />
+      <br />
+      <!-- lettre de motivaiton -->
+      <label for="email">Lettre de motivaiton : </label>
+      <textarea
+        name="textarea"
+        id="motivationText"
+        cols="30"
+        rows="10"
+      ></textarea>
       <br />
     </form>
   </body>
