@@ -9,36 +9,36 @@
     <form name="ficheInscription" method="POST">
       <!-- nom prénom  -->
       <label for="nom">Nom : </label>
-      <input type="text" />
+      <input type="text" id="nom" placeholder="Ex : Dupont" />
       <label for="prenom">Prénom : </label>
-      <input type="text" />
+      <input type="text" id="prenom" placeholder="Ex : Didier" />
       <br />
       <!-- date et lieu de naissance  -->
       <label for="dateNaissance">Date de naissance : </label>
-      <input type="datetime" />
+      <input type="datetime" id="dateNaissance" placeholder="01/04/1942" />
       <label for="lieuNaissance">Ville de naissance : </label>
-      <input type="text" />
+      <input type="text" id="lieuNaissance" placeholder="Ex : Paris" />
       <br />
       <!-- pays d'origine -->
       <label for="paysOrigine">Pays d'origine : </label>
-      <input type="text" />
+      <input type="text" id="paysOrigine" placeholder="Ex : France" />
       <br />
       <!-- civilité -->
       Civilité :
-      <label for="ciciliteM">M</label>
-      <input type="checkbox" />
-      <label for="ciciliteF">F</label>
-      <input type="checkbox" />
+      <label for="civiliteM">M</label>
+      <input type="checkbox" id="civiliteM" />
+      <label for="civiliteF">F</label>
+      <input type="checkbox" id="civiliteF" />
       <br />
       <!-- note au BAC -->
       <label for="noteBac"
         >Note obtenue au BAC (moyenne ou pourcentage) :
       </label>
-      <input type="number" />
+      <input type="number" id="noteBac" placeholder="15/20 ou 75%" />
       <br />
       <!-- formation -->
       <label for="formation">Formation : </label>
-      <input type="text" />
+      <input type="text" id="formation" placeholder="Ex : Bac L" />
       <br />
       <!-- d'autres choix de formation possible -->
       <label for="formations">Autres formations : </label>
@@ -50,18 +50,19 @@
       <br />
       <!-- mail et téléphone -->
       <label for="email">Adresse email : </label>
-      <input type="text" />
+      <input type="text" id="email" placeholder="Ex : didierdupont@gmail.com" />
       <br />
       <label for="numTelephone">Numéro de téléphone : </label>
-      <input type="text" />
+      <input type="text" id="numTelephone" placeholder="Ex : 0615482686" />
       <br />
       <!-- lettre de motivaiton -->
-      <label for="email">Lettre de motivaiton : </label>
+      <label for="motiv">Lettre de motivaiton : </label>
       <textarea
         name="textarea"
-        id="motivationText"
+        id="motiv"
         cols="30"
         rows="10"
+        placeholder="Ex : Saisissez vos motivaitons."
       ></textarea>
       <br />
       <!-- sumit -->
