@@ -1,0 +1,88 @@
+/*Mise en forme de "TP 7_Histoire_du_net.html"*/
+
+/* BODY */
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #c8c8c8;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 8%;
+}
+
+/* TITRES */
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #cf0013;
+}
+
+/* INTRODUCTION */
+.networkOfNetworks > strong,
+em {
+  font-weight: unset;
+}
+
+a {
+  color: #cf0013;
+}
+
+/* TABLEAU */
+table {
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #333333;
+  color: #d7d7d7;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+
+tbody > tr:hover {
+  background-color: #999999;
+  cursor: pointer;
+}
+
+tr > :first-child {
+  text-align: center;
+}
+
+/* IMAGE */
+figure {
+  background-color: #333333;
+  text-align: center;
+  color: #dddddd;
+  margin: 0px;
+  margin-top: 20px;
+  padding: 4%;
+  border: 2px;
+  border-radius: 6px;
+  border-style: solid;
+  border-color: #cf0013;
+}
+
+img {
+  width: 100%;
+}
+
+/* Protocole TCP/IP */
+p:last-of-type {
+  background-color: #b7b7b7;
+  border-color: #6b64b3;
+  color: #6b64b3;
+  border-style: dashed;
+  border-width: 2px;
+  margin: 30px;
+  margin-top: 0px;
+  padding: 10px;
+}
