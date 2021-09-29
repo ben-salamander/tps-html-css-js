@@ -4,13 +4,44 @@
   box-sizing: border-box;
 }
 
-header {
+.navBar {
+  display: flex;
   background-color: #ff4254;
   color: #ffd453;
   padding: 5px;
 }
 
+.navBar > * {
+  flex: 1 100%;
+}
+
+.navBar > div:hover {
+  text-decoration: #ffd453;
+  text-decoration-style: solid;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+.navBar > .contacts,
 .newContact {
-  position: unset;
-  right: 0%;
+  text-align: right;
+}
+
+thead > tr {
+  background-color: #001e2f;
+  color: #f7fefd;
+}
+
+.btnVoir {
+  background-color: #007ccb;
+  margin: 4px;
+  margin-right: 0px;
+  padding: 4px;
+}
+
+.btnSupprimer {
+  background-color: #ff5c6c;
+  margin: 4px;
+  margin-left: 0px;
+  padding: 4px;
 }
