@@ -12,11 +12,12 @@ body {
 
 /* TITRES */
 h1 {
+  font-family: Georgia, Times, "Times New Roman", serif;
   text-align: center;
 }
 
 h2 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Georgia, Times, "Times New Roman", serif;
   color: #cf0013;
 }
 
