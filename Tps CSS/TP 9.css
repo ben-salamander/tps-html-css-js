@@ -30,8 +30,8 @@
   text-align: right;
 }
 
-/* TITRE TABLEAU */
-.titreListeContacts {
+/* TITRES */
+.titreContact {
   font-size: 18px;
   padding: 30px 0px 0px 10px;
 }
@@ -64,19 +64,45 @@
 }
 
 .btnVoir {
-  flex: 1 400px;
+  flex: 1;
   background-color: #007ccb;
   color: whitesmoke;
   text-align: center;
-  margin: 4px 0px 4px 0px;
+  margin: 4px 0px 4px 4px;
   padding: 4px;
 }
 
 .btnSupprimer {
-  flex: 1 400px;
+  flex: 1;
   background-color: #ff5c6c;
   color: whitesmoke;
   text-align: center;
-  margin: 4px 0px 4px 0px;
+  margin: 4px 4px 4px 0px;
   padding: 4px;
+}
+
+/* FORMULAIRE NOUVEAU CONTACT */
+.formContact {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0 0 10px;
+}
+
+.formContact > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContact input {
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  max-width: 400px;
+  margin-bottom: 15px;
+}
+
+.submitContact {
+  border-style: none;
+  background-color: #4baf4f;
+  color: whitesmoke;
+  max-width: 100px;
 }
