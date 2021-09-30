@@ -1,6 +1,9 @@
-compteur = 0;
-email = prompt("Veuillez entrer votre adresse email :");
-mdp = prompt("Veuillez entrer votre mot de passe :");
+let compteur = 0;
+let email = prompt("Veuillez entrer votre adresse email :");
+let mdp = prompt("Veuillez entrer votre mot de passe :");
+let emailCk;
+let mdpCk;
+
 while (compteur < 5) {
   emailCk = prompt("Veuillez entrer votre adresse email pour vous connecter :");
   mdpCk = prompt(
