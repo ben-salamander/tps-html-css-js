@@ -9,12 +9,12 @@ while (compteur < 5) {
   mdpCk = prompt(
     "Veuillez entrer votre adresse mot de passe pour vous connecter :"
   );
+  compteur++;
   if (email == emailCk && mdp == mdpCk) {
     alert("Bienvenue dans votre espace !");
   } else if (compteur == 5) {
-    ("Vous avez fais trop de tentavives, votre compte est bloqué !");
+    alert("Vous avez fais trop de tentavives, votre compte est bloqué !");
   } else {
     alert("Erreur de saisie");
   }
-  compteur++;
 }
