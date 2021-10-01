@@ -6,8 +6,7 @@ let emailCk = prompt(
 let mdpCk = prompt(
   "Veuillez entrer votre adresse mot de passe pour vous connecter :"
 );
-if (email == emailCk && mdp == mdpCk) {
-  alert("Bienvenue dans votre espace !");
-} else {
+while (email != emailCk || mdp != mdpCk) {
   alert("Erreur de saisie");
 }
+alert("Bienvenue dans votre espace !");
