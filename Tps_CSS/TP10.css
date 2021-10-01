@@ -5,55 +5,52 @@
   padding: 6px;
 }
 
-.layout {
-  display: grid;
-  /* grid-template-columns: repeat(1, 1fr); */
-  /* grid-template-areas:
-    "navBar,navBar"
-    "banniereImg, banniereImg"
-    "aPropos,lienRapide1"
-    "aPropos,lienRapide2"
-    "peidPage,piedPage"; */
-}
-
-.navBar {
-  grid-area: navBar;
-  /* display: grid;
-  grid-template-columns: repeat(4, 1fr); */
-}
-
-/* /* .logo {
+/* GRID AREA DECLARATIONS */
+.logo {
   grid-area: logo;
-} */
-
-/* .services {
+}
+.services {
   grid-area: services;
 }
-
 .expertise {
   grid-area: expertise;
-} 
-
+}
 .contact {
   grid-area: contact;
-} */
-
-/* .banniereImg {
+}
+.banniereImg {
   grid-area: banniereImg;
-} */
-
-/* .aPropos {
+}
+.aPropos {
   grid-area: aPropos;
-} */
-
-/* .lienRapide1 {
+}
+.lienRapide1 {
   grid-area: lienRapide1;
-} */
-
-/* .lienRapide2 {
+}
+.lienRapide2 {
   grid-area: lienRapide2;
-} */
-
+}
 .piedPage {
   grid-area: piedPage;
+}
+
+/* GRAND AFFICHAGE */
+@media screen and (min-width: 800px) {
+  .layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "navBar navBar"
+      "banniereImg banniereImg"
+      "aPropos lienRapide1"
+      "aPropos lienRapide2"
+      "piedPage piedPage";
+  }
+
+  .navBar {
+    grid-area: navBar;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "logo services expertise contact";
+  }
 }
