@@ -9,14 +9,14 @@ while (compteur < 5) {
   mdpCk = prompt(
     "Veuillez entrer votre adresse mot de passe pour vous connecter :"
   );
-  if ((email == emailCk) & (mdp == mdpCk)) {
+  if (email == emailCk && mdp == mdpCk) {
     alert("Bienvenue dans votre espace !");
   } else {
     alert("Erreur de saisie");
   }
   compteur++;
 }
-if ((compteur == 5) & ((email != emailCk) | (mdp != mpdCk))) {
+if (compteur == 5 && (email != emailCk || mdp != mpdCk)) {
   alert(
     "Vous avez essayez de vous connecter trop de fois, votre compte est bloqué."
   );
