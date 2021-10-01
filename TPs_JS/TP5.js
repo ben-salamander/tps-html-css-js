@@ -11,13 +11,10 @@ while (compteur < 5) {
   );
   if (email == emailCk && mdp == mdpCk) {
     alert("Bienvenue dans votre espace !");
+  } else if (compteur == 5) {
+    ("Vous avez fais trop de tentavives, votre compte est bloqué !");
   } else {
     alert("Erreur de saisie");
   }
   compteur++;
-}
-if (compteur == 5 && (email != emailCk || mdp != mpdCk)) {
-  alert(
-    "Vous avez essayez de vous connecter trop de fois, votre compte est bloqué."
-  );
 }
