@@ -7,43 +7,53 @@
 
 .layout {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas:
+  /* grid-template-columns: repeat(1, 1fr); */
+  /* grid-template-areas:
     "navBar,navBar"
     "banniereImg, banniereImg"
     "aPropos,lienRapide1"
     "aPropos,lienRapide2"
-    "peidPage,piedPage";
+    "peidPage,piedPage"; */
 }
 
 .navBar {
   grid-area: navBar;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr); */
 }
 
-/* .logo {
+/* /* .logo {
   grid-area: logo;
-}
+} */
 
-.services {
+/* .services {
   grid-area: services;
 }
 
 .expertise {
   grid-area: expertise;
-}
+} 
 
 .contact {
   grid-area: contact;
 } */
 
-/* .banniereImg {grid-area: banniereImg;}
+/* .banniereImg {
+  grid-area: banniereImg;
+} */
 
-.aPropos {grid-area: aPropos;}
+/* .aPropos {
+  grid-area: aPropos;
+} */
 
-.lienRapide1 {grid-area: lienRapide1;}
+/* .lienRapide1 {
+  grid-area: lienRapide1;
+} */
 
-.lienRapide2 {grid-area: lienRapide2;}
+/* .lienRapide2 {
+  grid-area: lienRapide2;
+} */
 
-.piedPage {grid-area: piedPage;} */
+.piedPage {
+  grid-area: piedPage;
+}
