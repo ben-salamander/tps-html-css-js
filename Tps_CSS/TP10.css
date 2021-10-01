@@ -8,6 +8,12 @@
 .layout {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "navBar,navBar"
+    "banniereImg, banniereImg"
+    "aPropos,lienRapide1"
+    "aPropos,lienRapide2"
+    "peidPage,piedPage";
 }
 
 .navBar {
