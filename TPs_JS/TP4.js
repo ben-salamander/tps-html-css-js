@@ -8,5 +8,9 @@ let mdpCk = prompt(
 );
 while (email != emailCk || mdp != mdpCk) {
   alert("Erreur de saisie");
+  emailCk = prompt("Veuillez entrer votre adresse email pour vous connecter :");
+  mdpCk = prompt(
+    "Veuillez entrer votre adresse mot de passe pour vous connecter :"
+  );
 }
 alert("Bienvenue dans votre espace !");
