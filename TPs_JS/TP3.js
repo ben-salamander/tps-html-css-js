@@ -1,4 +1,4 @@
-age = prompt("Veuillez entrer l'age de votre enfant :");
+let age = prompt("Veuillez entrer l'age de votre enfant :");
 if (age >= 7 && age <= 9) {
   alert("Votre enfant est un poussin.");
 } else if (age >= 10 && age <= 11) {
