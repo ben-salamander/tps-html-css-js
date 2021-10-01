@@ -1,0 +1,43 @@
+.layout div {
+  font-size: 30px;
+  font-weight: 700;
+  border: 1px solid black;
+  padding: 6px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.navBar {
+  grid-area: navBar;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* .logo {
+  grid-area: logo;
+}
+
+.services {
+  grid-area: services;
+}
+
+.expertise {
+  grid-area: expertise;
+}
+
+.contact {
+  grid-area: contact;
+} */
+
+/* .banniereImg {grid-area: banniereImg;}
+
+.aPropos {grid-area: aPropos;}
+
+.lienRapide1 {grid-area: lienRapide1;}
+
+.lienRapide2 {grid-area: lienRapide2;}
+
+.piedPage {grid-area: piedPage;} */
