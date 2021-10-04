@@ -10,7 +10,7 @@ class student {
     this.option = prompt("Option");
     this.isEditable =
       prompt("Les nom, prénom et options sont-ils modifables ?") ==
-      ("Oui" || "oui" || "o")
+      ("Oui" || "oui" || "o" || "OUI" || "Yes" || "Yes" || "y" || "YES")
         ? true
         : false;
     this.listCours = this.newListCours();
