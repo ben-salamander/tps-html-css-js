@@ -1,5 +1,5 @@
 //CLASSES
-class student {
+class Student {
   constructor() {
     alert("Création d'un étudiant");
     this.nom = prompt("Nom :");
@@ -15,33 +15,24 @@ class student {
         : false;
     this.listCours = this.newListCours();
   }
+}
 
-  //Fonction de construction de la liste des cours
-  newListCours() {
-    let cours = "cours";
-    let list = [];
-    while (cours != "") {
-      cours = prompt("Nouveaux cours");
-      list.push(cours);
-    }
-    list.pop();
-    return list;
+//Fonctions student
+
+Student.prototype.newListCours = function () {
+  let cours = "cours";
+  let list = [];
+  while (cours != "") {
+    cours = prompt("Nouveaux cours");
+    list.push(cours);
   }
+  list.pop();
+  return list;
+};
 
-  // constructor(nom,prenom,age,genre,pays,option,isEditable,listCours){
-  //     this.nom = nom;
-  //     this.prenom = prenom;
-  //     this.age = age ;
-  //     this.genre = genre;
-  //     this.pays = pays;
-  //     this.option = option;
-  //     this.isEditable = isEditable;
-  //     this. listCours = listCours;
-  // }
-
-  tostring() {
-    console.log(
-      `Nom : ${this.nom}
+Student.prototype.tostring = function () {
+  console.log(
+    `Nom : ${this.nom}
 Prenom : ${this.prenom}
 Age : ${this.age}
 Genre : ${this.genre}
@@ -49,18 +40,19 @@ Pays : ${this.pays}
 Option : ${this.option}
 Modiable : ${this.isEditable ? "Oui" : "Non"}
 Liste des cours : ${this.listCours}`
-    );
-  }
-}
+  );
+};
 
 //PROGRAMME
 const nbEtudiants = parseInt(prompt("Nombre d'étudiants à incrire :"));
 const etudiants = [];
 
 for (let i = 0; i < nbEtudiants; i++) {
-  etudiants.push(new student());
+  etudiants.push(new Student());
 }
 
-etudiants.forEach((element) => {
-  element.tostring();
+etudiants.forEach((etudiant) => {
+  if (etudiant.pays == "Chine") {
+    etudiant.tostring();
+  }
 });
