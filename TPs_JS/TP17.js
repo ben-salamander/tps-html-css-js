@@ -8,7 +8,7 @@ let sommeDiag = 0;
 for (let i = 0; i < taille; i++) {
   matrice.push([]);
   for (let j = 0; j < taille; j++) {
-    matrice[i].push(parseInt(Math.random() * 2));
+    matrice[i].push(parseInt(Math.random() * 10));
   }
 }
 
