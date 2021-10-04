@@ -1,6 +1,6 @@
 let compteur = 0;
-let email = prompt("Veuillez entrer votre adresse email :");
-let mdp = prompt("Veuillez entrer votre mot de passe :");
+const email = prompt("Veuillez entrer votre adresse email :");
+const mdp = prompt("Veuillez entrer votre mot de passe :");
 let emailCk;
 let mdpCk;
 
