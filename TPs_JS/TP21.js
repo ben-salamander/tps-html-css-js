@@ -15,10 +15,20 @@ class Student {
         : false;
     this.listCours = this.newListCours();
   }
+
+  // constructor(nom,prenom,age,genre,pays,option,isEditable,listCours){
+  //     this.nom = nom;
+  //     this.prenom = prenom;
+  //     this.age = age ;
+  //     this.genre = genre;
+  //     this.pays = pays;
+  //     this.option = option;
+  //     this.isEditable = isEditable;
+  //     this. listCours = listCours;
+  // }
 }
 
 //Fonctions student
-
 Student.prototype.newListCours = function () {
   let cours = "cours";
   let list = [];
