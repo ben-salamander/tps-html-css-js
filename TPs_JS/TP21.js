@@ -54,5 +54,13 @@ Liste des cours : ${this.listCours}`
 }
 
 //PROGRAMME
-const etudiant = new student();
-etudiant.tostring();
+const nbEtudiants = parseInt(prompt("Nombre d'étudiants à incrire :"));
+const etudiants = [];
+
+for (let i = 0; i < nbEtudiants; i++) {
+  etudiants.push(new student());
+}
+
+etudiants.forEach((element) => {
+  element.tostring();
+});
