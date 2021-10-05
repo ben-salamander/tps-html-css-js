@@ -189,6 +189,11 @@ do {
   );
 } while (0);
 
+// 0 - Lister tous les étudiants pour comparer les données avec les résultats
+etudiants.forEach((etudiant) => {
+  console.log(etudiant.tostring());
+});
+
 // 1 - Trouver le nombre des chinoise dans notre collection
 console.log("------Nombre de chinoises------");
 let chinoises = [];
