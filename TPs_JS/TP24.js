@@ -52,3 +52,57 @@ Student.prototype.tostring = function () {
     }\nListe des cours : ${this.listCours}`
   );
 };
+
+//AJOUT COURS
+const listCours = document.querySelector("#liste-cours");
+const btnCours = document.querySelector("#btn-cours");
+const ajoutCours = document.querySelector("#ajout-cours");
+
+btnCours.addEventListener("click", newCours);
+
+function newCours() {
+  const newLi = document.createElement("li");
+  newLi.innerText = ajoutCours.value;
+  listCours.appendChild(newLi);
+}
+
+//RECUPERATION FORMULAIRE
+let etudiants = [];
+let nom = document.querySelector("#nom");
+let prenom = document.querySelector("#prenom");
+let age = document.querySelector("#age");
+let genreM = document.querySelector("#genre-m");
+let pays = document.querySelector("#pays");
+let option = document.querySelector("#option");
+let isEditable = document.querySelector("#modifiable-true");
+let listeCours = document.querySelector("#liste-cours");
+let editable = false;
+let genre = "";
+let cours = [];
+
+const btnValider = document.querySelector("#btn-valider");
+
+btnValider.addEventListener("click", newEtudiant);
+
+function newEtudiant() {
+  editable = isEditable.checked;
+  genre = genreM.checked == true ? "M" : "F";
+  listCours.querySelectorAll("li").forEach((element) => {
+    cours.push(element.innerText);
+  });
+
+  etudiants.push(
+    new Student(
+      nom.value,
+      prenom.value,
+      age.value,
+      genre,
+      pays.value,
+      option.value,
+      editable,
+      cours
+    )
+  );
+}
+
+//----------------------

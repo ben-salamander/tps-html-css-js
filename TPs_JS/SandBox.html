@@ -7,7 +7,61 @@
   </head>
   <body>
     <h1>Let's Go !</h1>
-    <form></form>
-    <script src="TP22.js"></script>
+    <!-- Formulaire d'inscription -->
+    <form name="fiche_inscription" method="POST">
+      <!-- nom prénom  -->
+      <p>
+        <label for="nom">Nom : </label>
+        <input type="text" id="nom" placeholder="Ex : Dupont" />
+        <label for="prenom">Prénom : </label>
+        <input type="text" id="prenom" placeholder="Ex : Didier" />
+      </p>
+      <!-- age  -->
+      <p>
+        <label for="age">Age : </label>
+        <input type="number" id="age" />
+      </p>
+      <!-- genre -->
+      <p>
+        Genre :
+        <label for="genre-m">M</label>
+        <input type="radio" id="genre-m" name="genre" />
+        <label for="genre-f">F</label>
+        <input type="radio" id="genre-f" name="genre" />
+      </p>
+      <!-- pays -->
+      <p>
+        <label for="pays">Pays : </label>
+        <input type="text" id="pays" placeholder="Ex : France" />
+      </p>
+      <!-- option -->
+      <p>
+        <label for="option">Option : </label>
+        <input type="text" id="option" placeholder="Ex : Maths" />
+      </p>
+      <!-- Modifiable -->
+      <p>
+        Nom, prénom et option modifiables ? :
+        <label for="modifiable-true">Oui</label>
+        <input type="radio" id="modifiable-true" name="modifiable" />
+        <label for="modifiable-false">Non</label>
+        <input type="radio" id="modifiable-false" name="modifiable" />
+      </p>
+      <!-- Liste des cours -->
+      <p>
+        <div>
+          Liste des cours :
+          <ul id = "liste-cours">
+          </ul>
+        </div>
+        <div>
+          <input type="text" id="ajout-cours" placeholder="Informatique" />
+          <button type="button" id = "btn-cours">Ajouter cours</button>
+        </div>
+      </p>
+      <!-- sumit -->
+      <button type="button" id="btn-valider">Valider</button>
+    </form>
+    <script src="TP24.js"></script>
   </body>
 </html>
