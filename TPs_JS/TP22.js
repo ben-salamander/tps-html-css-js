@@ -43,6 +43,18 @@ Student.prototype.modifiable = function () {
     : false;
 };
 
+Student.prototype.changeFirstName = function (newFirstName) {
+  this.nom = newFirstName;
+};
+
+Student.prototype.changeLastName = function (newLastName) {
+  this.prenom = newLastName;
+};
+
+Student.prototype.changeOption = function (newOption) {
+  this.option = newOption;
+};
+
 Student.prototype.tostring = function () {
   console.log(
     `Nom : ${this.nom}\nPrenom : ${this.prenom}\nAge : ${this.age}\nGenre : ${

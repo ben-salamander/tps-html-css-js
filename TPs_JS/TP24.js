@@ -1,27 +1,15 @@
 //CLASSES
 class Student {
-  constructor() {
-    alert("Création d'un étudiant");
-    this.nom = prompt("Nom :");
-    this.prenom = prompt("Prénom :");
-    this.age = parseInt(prompt("Age"));
-    this.genre = prompt("Genre :");
-    this.pays = prompt("Pays");
-    this.option = prompt("Option");
-    this.isEditable = this.modifiable();
-    this.listCours = this.newListCours();
+  constructor(nom, prenom, age, genre, pays, option, isEditable, listCours) {
+    this.nom = nom;
+    this.prenom = prenom;
+    this.age = age;
+    this.genre = genre;
+    this.pays = pays;
+    this.option = option;
+    this.isEditable = isEditable;
+    this.listCours = listCours;
   }
-
-  // constructor(nom,prenom,age,genre,pays,option,isEditable,listCours){
-  //     this.nom = nom;
-  //     this.prenom = prenom;
-  //     this.age = age ;
-  //     this.genre = genre;
-  //     this.pays = pays;
-  //     this.option = option;
-  //     this.isEditable = isEditable;
-  //     this. listCours = listCours;
-  // }
 }
 
 //Fonctions student
@@ -64,17 +52,3 @@ Student.prototype.tostring = function () {
     }\nListe des cours : ${this.listCours}`
   );
 };
-
-//PROGRAMME
-const nbEtudiants = parseInt(prompt("Nombre d'étudiants à incrire :"));
-const etudiants = [];
-
-for (let i = 0; i < nbEtudiants; i++) {
-  etudiants.push(new Student());
-}
-
-etudiants.forEach((etudiant) => {
-  if (etudiant.pays == "Chine") {
-    etudiant.tostring();
-  }
-});
