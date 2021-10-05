@@ -13,7 +13,7 @@ class Student {
   //   }
 
   constructor(nom, prenom, age, genre, pays, option, isEditable, listCours) {
-    this.nom = nom;
+    this.nom = nom.toUpperCase();
     this.prenom = prenom;
     this.age = age;
     this.genre = genre;
@@ -45,14 +45,11 @@ Student.prototype.modifiable = function () {
 
 Student.prototype.tostring = function () {
   console.log(
-    `Nom : ${this.nom}
-  Prenom : ${this.prenom}
-  Age : ${this.age}
-  Genre : ${this.genre}
-  Pays : ${this.pays}
-  Option : ${this.option}
-  Modiable : ${this.isEditable ? "Oui" : "Non"}
-  Liste des cours : ${this.listCours}`
+    `Nom : ${this.nom}\nPrenom : ${this.prenom}\nAge : ${this.age}\nGenre : ${
+      this.genre
+    }\nPays : ${this.pays}\nOption : ${this.option}\nModiable : ${
+      this.isEditable ? "Oui" : "Non"
+    }\nListe des cours : ${this.listCours}`
   );
 };
 
