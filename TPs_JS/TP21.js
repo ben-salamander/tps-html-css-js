@@ -8,11 +8,7 @@ class Student {
     this.genre = prompt("Genre :");
     this.pays = prompt("Pays");
     this.option = prompt("Option");
-    this.isEditable =
-      prompt("Les nom, prénom et options sont-ils modifables ?") ==
-      ("Oui" || "oui" || "o" || "OUI" || "Yes" || "Yes" || "y" || "YES")
-        ? true
-        : false;
+    this.isEditable = this.modifiable();
     this.listCours = this.newListCours();
   }
 
@@ -38,6 +34,13 @@ Student.prototype.newListCours = function () {
   }
   list.pop();
   return list;
+};
+
+Student.prototype.modifiable = function () {
+  return prompt("Les nom, prénom et options sont-ils modifables ?") ==
+    ("Oui" || "oui" || "o" || "OUI" || "Yes" || "Yes" || "y" || "YES")
+    ? true
+    : false;
 };
 
 Student.prototype.tostring = function () {
