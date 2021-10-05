@@ -54,39 +54,35 @@ Student.prototype.tostring = function () {
 };
 
 //AJOUT COURS
-const listCours = document.querySelector("#liste-cours");
 const btnCours = document.querySelector("#btn-cours");
-const ajoutCours = document.querySelector("#ajout-cours");
+const listCours = document.querySelector("#liste-cours");
+let coursChild = [];
 
 btnCours.addEventListener("click", newCours);
 
 function newCours() {
+  const ajoutCours = document.querySelector("#ajout-cours");
   const newLi = document.createElement("li");
   newLi.innerText = ajoutCours.value;
+  coursChild.push(newLi);
   listCours.appendChild(newLi);
 }
 
 //RECUPERATION FORMULAIRE
 let etudiants = [];
-let nom = document.querySelector("#nom");
-let prenom = document.querySelector("#prenom");
-let age = document.querySelector("#age");
-let genreM = document.querySelector("#genre-m");
-let pays = document.querySelector("#pays");
-let option = document.querySelector("#option");
-let isEditable = document.querySelector("#modifiable-true");
-let listeCours = document.querySelector("#liste-cours");
-let editable = false;
-let genre = "";
-let cours = [];
-
-const btnValider = document.querySelector("#btn-valider");
-
-btnValider.addEventListener("click", newEtudiant);
 
 function newEtudiant() {
-  editable = isEditable.checked;
-  genre = genreM.checked == true ? "M" : "F";
+  const nom = document.querySelector("#nom");
+  const prenom = document.querySelector("#prenom");
+  const age = document.querySelector("#age");
+  const genreM = document.querySelector("#genre-m");
+  const pays = document.querySelector("#pays");
+  const option = document.querySelector("#option");
+  const isEditable = document.querySelector("#modifiable-true");
+  const cours = [];
+  const editable = isEditable.checked;
+  const genre = genreM.checked == true ? "M" : "F";
+
   listCours.querySelectorAll("li").forEach((element) => {
     cours.push(element.innerText);
   });
@@ -105,4 +101,57 @@ function newEtudiant() {
   );
 }
 
-//----------------------
+//Ajout dernier etudiant
+const tableauEtudiants = document.querySelector("#tableau-etudiants");
+
+function etudiantTab() {
+  const newTr = document.createElement("tr");
+  const newTdNom = document.createElement("td");
+  const newTdPrenom = document.createElement("td");
+  const newTdAge = document.createElement("td");
+  const newTdGenre = document.createElement("td");
+  const newTdPays = document.createElement("td");
+  const newTdOption = document.createElement("td");
+  const newTdModifiable = document.createElement("td");
+  const newTdCours = document.createElement("td");
+
+  for (let i = 0; i < etudiants.length; i++) {
+    newTdNom.innerText = etudiants[i].nom;
+    newTdPrenom.innerText = etudiants[i].prenom;
+    newTdAge.innerText = etudiants[i].age;
+    newTdGenre.innerText = etudiants[i].genre;
+    newTdPays.innerText = etudiants[i].pays;
+    newTdOption.innerText = etudiants[i].option;
+    newTdModifiable.innerText = etudiants[i].isEditable == true ? "Oui" : "Non";
+    newTdCours.innerText = etudiants[i].listCours.toString();
+
+    tableauEtudiants
+      .appendChild(newTr)
+      .append(
+        newTdNom,
+        newTdPrenom,
+        newTdAge,
+        newTdGenre,
+        newTdPays,
+        newTdOption,
+        newTdModifiable,
+        newTdCours
+      );
+  }
+}
+
+//Appuis bouton valider
+const btnValider = document.querySelector("#btn-valider");
+
+btnValider.addEventListener("click", validation);
+
+function validation() {
+  newEtudiant();
+  etudiantTab();
+  coursChild.forEach((element) => {
+    listCours.removeChild(element);
+  });
+  coursChild = [];
+  console.log(etudiants[etudiants.length - 1].tostring());
+  document.querySelector("#fiche-inscription").reset();
+}
