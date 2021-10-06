@@ -77,7 +77,7 @@ function etudiantTab() {
 function supprimer() {
   etudiants.splice(this.parentElement.rowIndex, 1);
   this.parentElement.remove();
-  affVoir(this, true);
+  affVoir(this);
 }
 
 //**********ESPACE VOIR ETUDIANT************
@@ -100,11 +100,12 @@ const voirBioValue = document.createElement("span");
 //FONCTIONS
 let etudiant;
 //Affichage section "voir"
-function affVoir(thisRowEtu, supprimer = false) {
+function affVoir(thisRowEtu) {
+  console.log(affVoir.caller.name);
   if (
     (etudiant == etudiants[thisRowEtu.parentElement.rowIndex] &&
       voirEtudiant.hidden == false) ||
-    supprimer
+    affVoir.caller.name == "supprimer"
   ) {
     voirEtudiant.hidden = true;
   } else {
