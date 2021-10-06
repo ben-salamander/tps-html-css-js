@@ -34,7 +34,15 @@ const stud3 = new Student(
   "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
 );
 
-const etudiants = [stud1, stud2, stud3];
+const stud4 = new Student(
+  "RICHARD",
+  "Ameline",
+  "richard.ameline@gmail.com",
+  "Mécanicienne",
+  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
+);
+
+const etudiants = [stud1, stud2, stud3, stud4];
 
 //Tableau Etudiant
 const tableauEtudiants = document.querySelector("#tableau-etudiants");
@@ -67,12 +75,13 @@ function etudiantTab() {
 
 //Appuis bouton supprimer
 function supprimer() {
+  affVoir(this);
+  etudiants.splice(this.parentElement.rowIndex, 1);
   this.parentElement.remove();
-  etudiants.splice(this.parentElement.rowIndex - 1, 1);
 }
 
-//ESPACE VOIR ETUDIANT
-//Constantes
+//**********ESPACE VOIR ETUDIANT************
+//CONSTANTES
 const voirEtudiant = document.querySelector("#voir-etudiant");
 const voirNom = document.createElement("div");
 
@@ -88,9 +97,9 @@ const voirBioDiv = document.createElement("div");
 const voirBioSpan = document.createElement("span");
 const voirBioValue = document.createElement("span");
 
-//Fonctions
+//FONCTIONS
 let etudiant;
-
+//Affichage section "voir"
 function affVoir(thisRowEtu) {
   if (
     etudiant == etudiants[thisRowEtu.parentElement.rowIndex] &&
@@ -102,6 +111,7 @@ function affVoir(thisRowEtu) {
   }
 }
 
+//Actualisation des infos à afficher
 function voir() {
   affVoir(this);
   if (voirEtudiant.hidden == true) return;
