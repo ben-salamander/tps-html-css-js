@@ -4,25 +4,29 @@
     <meta charset="UTF-8" />
     <title>Bac à sable TPs JS</title>
     <link rel="icon" type="image/jpg" href="images/travauxPratique.jpg" />
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1>Let's Go !</h1>
+    <p id = "err-formulaire"></p>
     <!-- Formulaire d'inscription -->
     <form id="fiche-inscription" method="POST">
       <!-- nom prénom  -->
-      <p>
+      <p >
+        <div id="err-nom"></div>
         <label for="nom">Nom : </label>
         <input type="text" id="nom" placeholder="Ex : Dupont" />
         <label for="prenom">Prénom : </label>
         <input type="text" id="prenom" placeholder="Ex : Didier" />
       </p>
       <!-- age  -->
-      <p>
+      <p><div id="err-age"></div>
         <label for="age">Age : </label>
         <input type="number" id="age" />
       </p>
       <!-- genre -->
       <p>
+        <div id="err-genre"></div>
         Genre :
         <label for="genre-m">M</label>
         <input type="radio" id="genre-m" name="genre" />
@@ -30,17 +34,19 @@
         <input type="radio" id="genre-f" name="genre" />
       </p>
       <!-- pays -->
-      <p>
+      <p><div id="err-pays"></div>
         <label for="pays">Pays : </label>
         <input type="text" id="pays" placeholder="Ex : France" />
       </p>
       <!-- option -->
       <p>
+        <div id="err-option"></div>
         <label for="option">Option : </label>
         <input type="text" id="option" placeholder="Ex : Maths" />
       </p>
       <!-- Modifiable -->
       <p>
+        <div id="err-modifiable"></div>
         Nom, prénom et option modifiables ? :
         <label for="modifiable-true">Oui</label>
         <input type="radio" id="modifiable-true" name="modifiable" />
@@ -49,6 +55,7 @@
       </p>
       <!-- Liste des cours -->
       <p>
+        <div id="err-cours"></div>
         <div>
           Liste des cours :
           <ul id = "liste-cours">
@@ -81,6 +88,6 @@
       </tbody>
     </table>
 
-    <script src="TP24.js"></script>
+    <script src="TP26.js"></script>
   </body>
 </html>
