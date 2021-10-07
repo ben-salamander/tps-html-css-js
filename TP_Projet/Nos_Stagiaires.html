@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style_projet.css" />
+    <title>TP Validation - Nos Stagiaires</title>
+  </head>
+  <body>
+    <div class="container-sm">
+      <h2>Liste des stagiaires</h2>
+      <table class="table table-bordered change_width">
+        <thead>
+          <tr>
+            <th>NOM</th>
+            <th>PRENOM</th>
+            <th>EMAIL</th>
+            <th>ACTION</th>
+          </tr>
+        </thead>
+        <tbody id="tableau-etudiants"></tbody>
+      </table>
+      <p>
+        <button onclick="window.location='Nouveau_Stagiaire.html'">
+          Ajouter
+        </button>
+      </p>
+
+      <p id="voir-etudiant"></p>
+    </div>
+    <script src="javascript.js"></script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+      crossorigin="anonymous"
+    />
+    <title>TP Validation - Nouveau Stagiaire</title>
+  </head>
+  <body>
+    <h2>Nouveau stagiaire</h2>
+    <form>
+      <p>
+        <label for="nom">Votre nom</label>
+        <input id="nom" type="text" />
+      </p>
+      <p>
+        <label for="prenom">Votre prénom</label>
+        <input id="prenom" type="text" />
+      </p>
+      <p>
+        <label for="Email">Votre Email</label>
+        <input id="email" type="email" />
+      </p>
+
+      <p>
+        <label>Etudes faites</label>
+        <select>
+          <option>Littérature</option>
+          <option>Sciences math</option>
+          <option>Sciences de vie et de terre</option>
+          <option>Sciences physiques</option>
+        </select>
+      </p>
+      <p>
+        <label for="bio">Biographie</label>
+        <textarea id="bio" maxlength="1200"> </textarea>
+      </p>
+      <p>
+        <input type="button" value="Ajouter" />
+      </p>
+    </form>
+  </body>
+</html>

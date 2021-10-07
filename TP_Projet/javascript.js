@@ -85,7 +85,7 @@ function etudiantTab() {
 
 //Appuis bouton supprimer
 function supprimer() {
-  etudiants.splice(this.parentElement.rowIndex, 1);
+  etudiants.splice(this.parentElement.rowIndex - 1, 1);
   this.parentElement.remove();
   affVoir(this);
   localStorage.setItem("storageEtudiants", JSON.stringify(etudiants));
@@ -113,7 +113,7 @@ let etudiant;
 //Affichage section "voir"
 function affVoir(thisRowEtu) {
   if (
-    (etudiant == etudiants[thisRowEtu.parentElement.rowIndex] &&
+    (etudiant == etudiants[thisRowEtu.parentElement.rowIndex - 1] &&
       voirEtudiant.hidden == false) ||
     affVoir.caller.name == "supprimer"
   ) {
@@ -128,7 +128,8 @@ function voir() {
   affVoir(this);
   if (voirEtudiant.hidden == true) return;
 
-  etudiant = etudiants[this.parentElement.rowIndex];
+  etudiant = etudiants[this.parentElement.rowIndex - 1];
+  console.log(this.parentElement.rowIndex - 1);
 
   voirNom.classList.add("voir-bold");
   voirNom.innerText = etudiant.nom + " " + etudiant.prenom;
