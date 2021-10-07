@@ -2,47 +2,109 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
       crossorigin="anonymous"
     />
-    <title>TP Validation - Nouveau Stagiaire</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
   </head>
-  <body>
-    <h2>Nouveau stagiaire</h2>
-    <form>
-      <p>
-        <label for="nom">Votre nom</label>
-        <input id="nom" type="text" />
-      </p>
-      <p>
-        <label for="prenom">Votre prénom</label>
-        <input id="prenom" type="text" />
-      </p>
-      <p>
-        <label for="Email">Votre Email</label>
-        <input id="email" type="email" />
-      </p>
+  <body class="body">
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">LOGO</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"></li>
+            </ul>
+            <form class="d-flex">
+              <a class="navbar-brand form-control me-2" href="index.html">ACCUEIL</a>
+              <a class="navbar-brand form-control me-2" href="Nos_Stagiaires.html"
+                >NOS STAGIAIRES</a
+              >
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+                <h2 >Nouveau stagiaire</h2>
+        
+              <form class="formulaire">
+                  <p>
+                    <label for="nom">Votre nom: </label>
+                    <input id="nom" placeholder="Nom" type="text"  />
+              
+                  </p>
+                  <p>
+                    <label for="prenom">Votre prénom: </label>
+                    <input id="prenom" placeholder="Prénom" type="text" />
+              
+                  </p>
+                  <p>
+                      <label for="Email"></label>Votre Email:  </label>
+                      <input id="email" placeholder="abc@xyz.com" type="email"  />
+                    </p>
+  
+                    <p>
+                      <label>
+                        Etudes faites:
+                      </label>
+                      <select id="etudes">
+                        <option>Littérature</option>
+                        <option>Sciences math</option>
+                        <option>Sciences de vie et de terre</option>
+                        <option>Sciences physiques</option>
+                      </select>
+                    </p>
+                    <p>
+                      <label for="bio">Biographie</label>
+                      <textarea id="bio" maxlength="1200">
+                
+                        </textarea>
+                    </p>
+  
+                  </p>
+                  <input type="button" id="btn-ajouter"value="Ajouter">
+              </p>
+          </form>
+      </div>
+    </main>
 
-      <p>
-        <label>Etudes faites</label>
-        <select id="etudes">
-          <option>Littérature</option>
-          <option>Sciences math</option>
-          <option>Sciences de vie et de terre</option>
-          <option>Sciences physiques</option>
-        </select>
-      </p>
-      <p>
-        <label for="bio">Biographie</label>
-        <textarea id="bio" maxlength="1200"> </textarea>
-      </p>
-      <p>
-        <button type="button" id="btn-ajouter">Ajouter</button>
-      </p>
-    </form>
+    <footer class="footer">
+      <div class="child_foot">
+        <h3>Notre adresse</h3>
+        <p class="para_footer">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+      <div class="child_foot">
+        <h3>S'inscrire à la newsletter</h3>
+        <input type="email" placeholder="Votre adresse email" /><button
+          class="button btn btn-primary btn-sm"
+        >
+          S'inscrire
+        </button>
+      </div>
+    </footer>
     <script src="Nouveau_Stagiaire.js"></script>
   </body>
 </html>
