@@ -4,6 +4,9 @@
   background-attachment: fixed;
   font-size: medium;
 }
+.logo {
+  max-width: 3rem;
+}
 
 .header {
   border: black solid 1px;
@@ -32,6 +35,10 @@ li > a {
   margin-top: 1%;
 }
 
+.main_img {
+  width: 100%;
+}
+
 .info {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -45,8 +52,6 @@ li > a {
   border: black solid 1px;
   padding: 5px 5% 5px 5%;
   background-color: azure;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 .para:nth-child(1) {
   grid-area: groupe;
@@ -101,13 +106,14 @@ li > a {
   padding: 1rem 2rem 1rem 2rem;
   margin: 1rem auto 1rem auto;
   border: black solid 1px;
+  min-width: 100%;
 }
 
 #bio {
   width: 100%;
 }
 
-.border1 {
+.voir-etudiant {
   border: black solid 1px;
   padding: 1rem;
   background-color: white;
@@ -115,9 +121,14 @@ li > a {
 
 .container_table {
   overflow-x: auto;
+  max-width: 650px;
 }
 .table {
   background-color: white;
+}
+.msg-err {
+  color: red;
+  font-style: italic;
 }
 
 @media all and (max-width: 780px) {
@@ -125,7 +136,7 @@ li > a {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 10px;
-    grid-auto-rows: 200px;
+    grid-auto-rows: auto;
     grid-template-areas:
       "groupe"
       "objectifs"

@@ -25,10 +25,15 @@ function etudiantTab() {
     const newTdEmail = document.createElement("td");
 
     const btnSupp = document.createElement("button");
+    btnSupp.classList.add("btn");
+    btnSupp.classList.add("btn-danger");
+    btnSupp.type = "button";
     btnSupp.innerText = "Supprimer";
     btnSupp.addEventListener("click", supprimer);
 
     const btnVoir = document.createElement("button");
+    btnVoir.type = "button";
+    btnVoir.classList.add("btn", "btn-primary");
     btnVoir.innerText = "Voir";
     btnVoir.addEventListener("click", voir);
 
@@ -36,16 +41,18 @@ function etudiantTab() {
     newTdPrenom.innerText = etudiants[i].prenom;
     newTdEmail.innerText = etudiants[i].email;
 
+    const newBtn = document.createElement("td");
+    newBtn.append(btnVoir, btnSupp);
     tableauEtudiants
       .appendChild(newTr)
-      .append(newTdNom, newTdPrenom, newTdEmail, btnVoir, btnSupp);
+      .append(newTdNom, newTdPrenom, newTdEmail, newBtn);
   }
 }
 
 //Appuis bouton supprimer
 function supprimer() {
-  etudiants.splice(this.parentElement.rowIndex - 1, 1);
-  this.parentElement.remove();
+  etudiants.splice(this.parentElement.parentElement.rowIndex - 1, 1);
+  this.parentElement.parentElement.remove();
   affVoir(this);
   localStorage.setItem("storageEtudiants", JSON.stringify(etudiants));
 }
@@ -72,7 +79,8 @@ let etudiant;
 //Affichage section "voir"
 function affVoir(thisRowEtu) {
   if (
-    (etudiant == etudiants[thisRowEtu.parentElement.rowIndex - 1] &&
+    (etudiant ==
+      etudiants[thisRowEtu.parentElement.parentElement.rowIndex - 1] &&
       voirEtudiant.hidden == false) ||
     affVoir.caller.name == "supprimer"
   ) {
@@ -87,8 +95,8 @@ function voir() {
   affVoir(this);
   if (voirEtudiant.hidden == true) return;
 
-  etudiant = etudiants[this.parentElement.rowIndex - 1];
-  console.log(this.parentElement.rowIndex - 1);
+  etudiant = etudiants[this.parentElement.parentElement.rowIndex - 1];
+  console.log(this.parentElement.parentElement.rowIndex - 1);
 
   voirNom.classList.add("voir-bold");
   voirNom.innerText = etudiant.nom + " " + etudiant.prenom;

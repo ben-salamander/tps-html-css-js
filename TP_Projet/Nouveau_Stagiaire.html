@@ -17,7 +17,7 @@
     <header class="header">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">LOGO</a>
+          <img class="logo" src="image/logo.png" />
           <button
             class="navbar-toggler"
             type="button"
@@ -34,8 +34,12 @@
               <li class="nav-item"></li>
             </ul>
             <form class="d-flex">
-              <a class="navbar-brand form-control me-2" href="index.html">ACCUEIL</a>
-              <a class="navbar-brand form-control me-2" href="Nos_Stagiaires.html"
+              <a class="navbar-brand form-control me-2" href="index.html"
+                >ACCUEIL</a
+              >
+              <a
+                class="navbar-brand form-control me-2"
+                href="Nos_Stagiaires.html"
                 >NOS STAGIAIRES</a
               >
             </form>
@@ -49,25 +53,30 @@
         
               <form class="formulaire">
                   <p>
+                    <div id="err-nom"></div>
                     <label for="nom">Votre nom: </label>
                     <input id="nom" placeholder="Nom" type="text"  />
               
                   </p>
                   <p>
+                    <div id="err-prenom"></div>
                     <label for="prenom">Votre prénom: </label>
                     <input id="prenom" placeholder="Prénom" type="text" />
               
                   </p>
                   <p>
+                    <div id="err-email"></div>
                       <label for="Email"></label>Votre Email:  </label>
                       <input id="email" placeholder="abc@xyz.com" type="email"  />
                     </p>
   
                     <p>
+                      <div id="err-etudes"></div>
                       <label>
                         Etudes faites:
                       </label>
                       <select id="etudes">
+                        <option>-- Choisir --</option>
                         <option>Littérature</option>
                         <option>Sciences math</option>
                         <option>Sciences de vie et de terre</option>
@@ -75,10 +84,9 @@
                       </select>
                     </p>
                     <p>
+                      <div id="err-bio"></div>
                       <label for="bio">Biographie</label>
-                      <textarea id="bio" maxlength="1200">
-                
-                        </textarea>
+                      <textarea id="bio" maxlength="1200"></textarea>
                     </p>
   
                   </p>
@@ -105,6 +113,11 @@
         </button>
       </div>
     </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+      crossorigin="anonymous"
+    ></script>
     <script src="Nouveau_Stagiaire.js"></script>
   </body>
 </html>
