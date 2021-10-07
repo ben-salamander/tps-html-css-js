@@ -9,40 +9,51 @@ class Student {
   }
 }
 
-//Recuperation des étudiants
-const stud1 = new Student(
-  "BOSSARD",
-  "Benjamin",
-  "benjamin.nbossard@gmail.com",
-  "Développeur Salesforce",
-  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
-);
+//Simulation local storage d'un autre page
+// etudiantsJson = [
+//   new Student(
+//     "BOSSARD",
+//     "Benjamin",
+//     "benjamin.nbossard@gmail.com",
+//     "Développeur Salesforce",
+//     "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
+//   ),
 
-const stud2 = new Student(
-  "GERBEAU",
-  "Virginie",
-  "gerbeau.virginie@gmail.com",
-  "Circacienne",
-  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
-);
+//   new Student(
+//     "GERBEAU",
+//     "Virginie",
+//     "gerbeau.virginie@gmail.com",
+//     "Circacienne",
+//     "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
+//   ),
 
-const stud3 = new Student(
-  "LEBRETON",
-  "ELOISE",
-  "lebreton.eloise@gmail.com",
-  "Animalière",
-  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
-);
+//   new Student(
+//     "LEBRETON",
+//     "ELOISE",
+//     "lebreton.eloise@gmail.com",
+//     "Animalière",
+//     "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
+//   ),
 
-const stud4 = new Student(
-  "RICHARD",
-  "Ameline",
-  "richard.ameline@gmail.com",
-  "Mécanicienne",
-  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
-);
+//   new Student(
+//     "RICHARD",
+//     "Ameline",
+//     "richard.ameline@gmail.com",
+//     "Mécanicienne",
+//     "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
+//   ),
+// ];
 
-const etudiants = [stud1, stud2, stud3, stud4];
+// //Envois étudiants dans le local storage (simulation)
+// if (!localStorage.getItem("storageEtudiants")) {
+//   localStorage.setItem("storageEtudiants", JSON.stringify(etudiantsJson));
+// } else {
+// }
+
+//Récupération du local storage et désserialisation JSON
+const etudiants = localStorage.getItem("storageEtudiants")
+  ? JSON.parse(localStorage.getItem("storageEtudiants"))
+  : [];
 
 //Tableau Etudiant
 const tableauEtudiants = document.querySelector("#tableau-etudiants");
@@ -66,7 +77,6 @@ function etudiantTab() {
     newTdPrenom.innerText = etudiants[i].prenom;
     newTdEmail.innerText = etudiants[i].email;
 
-    console.log(i);
     tableauEtudiants
       .appendChild(newTr)
       .append(newTdNom, newTdPrenom, newTdEmail, btnVoir, btnSupp);
@@ -78,6 +88,7 @@ function supprimer() {
   etudiants.splice(this.parentElement.rowIndex, 1);
   this.parentElement.remove();
   affVoir(this);
+  localStorage.setItem("storageEtudiants", JSON.stringify(etudiants));
 }
 
 //**********ESPACE VOIR ETUDIANT************
@@ -101,7 +112,6 @@ const voirBioValue = document.createElement("span");
 let etudiant;
 //Affichage section "voir"
 function affVoir(thisRowEtu) {
-  console.log(affVoir.caller.name);
   if (
     (etudiant == etudiants[thisRowEtu.parentElement.rowIndex] &&
       voirEtudiant.hidden == false) ||
