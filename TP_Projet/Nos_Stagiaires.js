@@ -9,47 +9,6 @@ class Student {
   }
 }
 
-//Simulation local storage d'un autre page
-// etudiantsJson = [
-//   new Student(
-//     "BOSSARD",
-//     "Benjamin",
-//     "benjamin.nbossard@gmail.com",
-//     "Développeur Salesforce",
-//     "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
-//   ),
-
-//   new Student(
-//     "GERBEAU",
-//     "Virginie",
-//     "gerbeau.virginie@gmail.com",
-//     "Circacienne",
-//     "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
-//   ),
-
-//   new Student(
-//     "LEBRETON",
-//     "ELOISE",
-//     "lebreton.eloise@gmail.com",
-//     "Animalière",
-//     "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
-//   ),
-
-//   new Student(
-//     "RICHARD",
-//     "Ameline",
-//     "richard.ameline@gmail.com",
-//     "Mécanicienne",
-//     "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
-//   ),
-// ];
-
-// //Envois étudiants dans le local storage (simulation)
-// if (!localStorage.getItem("storageEtudiants")) {
-//   localStorage.setItem("storageEtudiants", JSON.stringify(etudiantsJson));
-// } else {
-// }
-
 //Récupération du local storage et désserialisation JSON
 const etudiants = localStorage.getItem("storageEtudiants")
   ? JSON.parse(localStorage.getItem("storageEtudiants"))
